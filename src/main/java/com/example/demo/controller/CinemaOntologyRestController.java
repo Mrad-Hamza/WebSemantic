@@ -1,7 +1,11 @@
 package com.example.demo.controller;
 
+
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.jena.atlas.json.io.parser.JSONParser;
 
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
@@ -92,6 +96,7 @@ public class CinemaOntologyRestController {
 				"?Acteur ns:Age ?Age ." +
 				"?Acteur ns:Salaire ?Salaire ." +
 				"?Acteur ns:Name ?Name .\n" +
+
                 "} \n"
                 + "ORDER BY DESC(?Age)";
 				Query query = QueryFactory.create(queryString);
@@ -105,17 +110,20 @@ public class CinemaOntologyRestController {
 			    RDFNode y = soln.get("Age") ;
 			    RDFNode a = soln.get("Name") ;
 			    RDFNode z = soln.get("Salaire") ;
+
                 JSONObject obj = new JSONObject();
                 obj.put("Acteur" ,x.toString().split("#")[1]);
 	            obj.put("Age" ,y.toString());
 	            obj.put("Salaire" ,z.toString());
 	            obj.put("Name" ,a.toString());
+
 				list.add(obj);
 		    }
 		System.out.println(list);
 		return list;
 	}
 	
+
 	@GetMapping({"/acteurs/{name}"})
 	public List<JSONObject> ListActeurs(@PathVariable("name") String name)
 	{
@@ -225,6 +233,8 @@ public class CinemaOntologyRestController {
                 "?Producteur rdf:type ns:Producteur .\n" +
 				"?Producteur ns:Age ?Age ." +
 				"?Producteur ns:Salaire ?Salaire ." +
+
+
                 "}";
 				Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
@@ -236,6 +246,7 @@ public class CinemaOntologyRestController {
 		    	RDFNode x = soln.get("Producteur") ;
 			    RDFNode y = soln.get("Age") ;
 			    RDFNode z = soln.get("Salaire") ;
+
                 JSONObject obj = new JSONObject();
                 obj.put("Producteur" ,x.toString().split("#")[1]);
 	            obj.put("Age" ,y.toString());

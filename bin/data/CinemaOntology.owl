@@ -1,0 +1,704 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#"
+     xml:base="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesActeur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesActeur">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesPersonnes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesOuvres -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesOuvres"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesPersonnes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesPersonnes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnFilm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnFilm">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesOuvres"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnProducteur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnProducteur">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesPersonnes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnRealisateur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnRealisateur">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesPersonnes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUneSérie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUneSérie">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesOuvres"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Age"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#DateSortie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#DateSortie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Salaire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Salaire"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#SociétéDeProduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#SociétéDeProduction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Film"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Film">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Oeuvre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Film"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Série"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Oeuvre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Oeuvre">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aDesActeur"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnProducteur"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnRealisateur"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnFilm"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUnFilm"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUneSérie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#aUneSérie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Série"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Série -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Série">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Oeuvre"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Al_Pacino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Al_Pacino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.6M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Ana_D_armas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Ana_D_armas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Al_Pacino"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Ana_D_armas"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/05/2009</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMC</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Robert_Di_Neiro"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Quentin_Tarantino"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/09/2022</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBO</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.9M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Al_Pacino"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Robert_Di_Neiro"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Quentin_Tarantino"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/10/2011</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBO</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Leonardo_Di_Caprio"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Samuel_L_Jackson"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22/08/2022</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBO</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Leonardo_Di_Caprio"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Samuel_L_Jackson"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06/02/2013</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hulu</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Leonardo_Di_Caprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Leonardo_Di_Caprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.3M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Long_Métrage"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Leonardo_Di_Caprio"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Samuel_L_Jackson"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06/06/1998</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netflix</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Al_Pacino"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Robert_Di_Neiro"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03/10/2020</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netflix</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Quentin_Tarantino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Quentin_Tarantino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Robert_Di_Neiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Robert_Di_Neiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.9M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Samuel_L_Jackson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Samuel_L_Jackson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception"/>
+        <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
+        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59</Age>
+        <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.6</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Mini_Serie"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Ana_D_armas"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02/06/2014</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Testa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Testa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Serie_Limité"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Ana_D_armas"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18/10/2009</DateSortie>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AmazonPrime</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Producteur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Réalisateur"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Horreur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,117 @@
+
+/////////////Liste des personnes////////////
+SELECT * WHERE {
+?personne rdf:type ns:Personne .
+}
+
+
+/////////////Liste des responsables////////////
+SELECT * WHERE {
+?Responsables rdf:type ns:Responsable .
+}
+
+
+/////////////Liste des president////////////
+SELECT * WHERE {
+?President rdf:type ns:Président .
+}
+
+
+/////////////Liste des responsables relations externes////////////
+SELECT * WHERE {
+?Relations_externes rdf:type ns:Relation_externes .
+}
+
+
+/////////////Liste des responsables communication////////////
+SELECT * WHERE {
+?Rsp_Communication rdf:type ns:Rsp_communication .
+}
+
+
+/////////////Liste des responsables finances////////////
+SELECT * WHERE {
+?Rsp_finance rdf:type ns:Rsp_finance .
+}
+
+
+/////////////Liste des responsables suivi////////////
+SELECT * WHERE {
+?Rsp_suivi rdf:type ns:Rsp_suivi .
+}
+
+
+
+/////////////Liste des numéro téléphone des personnes////////////
+SELECT ?personne ?telephone 
+WHERE {
+?personne rdf:type ns:Personne .
+?personne ns:telephone ?telephone .
+}
+
+
+/////////////Liste des vétérinaires qui "examinent" un ou plusieurs animaux////////////
+SELECT ?vétérinaire ?animaux 
+WHERE {
+?vétérinaire rdf:type ns:Vétérinaire .
+?vétérinaire ns:examine ?animaux .
+}
+
+
+
+/////////////Liste des vétérinaires qui "controlent" un ou plusieurs animaux////////////
+SELECT ?vétérinaire ?animaux 
+WHERE {
+?vétérinaire rdf:type ns:Vétérinaire .
+?vétérinaire ns:controle ?animaux .
+}
+
+
+
+/////////////Nombre des locaux d'une association et son président////////////
+SELECT ?association $president (count(distinct ?locaux) as ?count) 
+WHERE {
+?association rdf:type ns:Association .
+?association ns:distribuée_en ?locaux .
+?association ns:géneré_par ?president .
+}
+GROUP BY ?association $president
+
+
+
+/////////////Liste des personnes qui ont soumis des candidatures////////////
+SELECT ?personne ?candidature
+WHERE {
+	?personne rdf:type ns:Personne .
+	?personne ns:postule ?candidature .
+}
+
+
+
+/////////////Liste des personnes qui ont soumis des candidatures bénévoles////////////
+SELECT ?personne ?candidature
+WHERE {
+	?personne rdf:type ns:Personne .
+	?candidature rdf:type ns:C_bénévole .
+	?personne ns:postule ?candidature .
+}
+
+
+
+/////////////Liste des personnes qui ont soumis des candidatures vétérinaires////////////
+SELECT ?personne ?candidature
+WHERE {
+	?personne rdf:type ns:Personne .
+	?candidature rdf:type ns:C_vétérinaire .
+	?personne ns:postule ?candidature .
+}
+
+
+
+/////////////Liste des benevoles et lerus rendez vous réservés////////////
+SELECT ?benevole (count(distinct ?rdvs) as ?count)
+WHERE {
+	?benevole rdf:type ?Personne .
+	?benevole ns:reserver_rdv ?rdvs .
+}
+GROUP BY ?benevole
