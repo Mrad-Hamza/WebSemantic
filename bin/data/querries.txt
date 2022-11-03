@@ -1,0 +1,7 @@
+PREFIX ns: <http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?Personne
+WHERE {
+?Personne rdf:type ns:Personne .
+}
