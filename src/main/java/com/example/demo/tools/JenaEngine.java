@@ -17,11 +17,6 @@ import org.apache.jena.rdf.model.*;
 import org.apache.jena.reasoner.rulesys.GenericRuleReasoner;
 import org.apache.jena.reasoner.rulesys.Rule;
 import org.apache.jena.util.FileManager;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
 import java.io.OutputStream;
 

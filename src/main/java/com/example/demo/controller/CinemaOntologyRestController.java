@@ -418,9 +418,6 @@ public class CinemaOntologyRestController {
                 "SELECT * \n" +
                 "WHERE {\n" +
                 "?Long_Métrage rdf:type ns:Long_Métrage .\n" +
-                "?Long_Métrage ns:aDesActeur ?Acteur .\n"+
-                "?Long_Métrage ns:aUnRealisateur ?Réalisateur .\n"+
-                "?Long_Métrage ns:aUnProducteur ?Producteur .\n"+
                 "?Long_Métrage ns:aUnGenre ?Genre .\n"+
 				"?Long_Métrage ns:DateSortie ?DateSortie ." +
 				"?Long_Métrage ns:SociétéDeProduction ?SociétéDeProduction ." +
@@ -433,17 +430,11 @@ public class CinemaOntologyRestController {
 		    	QuerySolution soln = results.nextSolution() ;
 		    	
 		    	RDFNode x = soln.get("Long_Métrage") ;
-			    RDFNode y = soln.get("Acteur") ;
-			    RDFNode z = soln.get("Réalisateur") ;
-			    RDFNode a = soln.get("Producteur") ;
 			    RDFNode b = soln.get("Genre") ;
 			    RDFNode c = soln.get("DateSortie") ;
 			    RDFNode d = soln.get("SociétéDeProduction") ;
                 JSONObject obj = new JSONObject();
                 obj.put("Long_Métrage" ,x.toString().split("#")[1]);
-	            obj.put("Acteur" ,y.toString().split("#")[1]);
-	            obj.put("Réalisateur" ,z.toString().split("#")[1]);
-	            obj.put("Producteur" ,a.toString().split("#")[1]);
 	            obj.put("Genre" ,b.toString().split("#")[1]);
 	            obj.put("DateSortie" ,c.toString());
 	            obj.put("SociétéDeProduction" ,d.toString());
