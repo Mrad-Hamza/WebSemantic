@@ -378,6 +378,19 @@
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DC</SociétéDeProduction>
     </owl:NamedIndividual>
     
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Spiderman-->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Spiderman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/10/2022</DateSortie>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiderman</Name>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DC</SociétéDeProduction>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad -->
