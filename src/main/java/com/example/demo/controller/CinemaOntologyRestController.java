@@ -268,13 +268,58 @@ public class CinemaOntologyRestController {
                 "SELECT * \n" +
                 "WHERE {\n" +
                 "?Mini_Serie rdf:type ns:Mini_Serie .\n" +
+                "?Mini_Serie ns:Name ?Name .\n"+
+				"?Mini_Serie ns:DateSortie ?DateSortie ." +
+				"?Mini_Serie ns:SociétéDeProduction ?SociétéDeProduction ." +
+                "}";
+				Query query = QueryFactory.create(queryString);
+		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
+		    ResultSet results = qexec.execSelect() ;
+		    while (results.hasNext())
+		    {
+		    	QuerySolution soln = results.nextSolution() ;
+		    	
+		    	RDFNode x = soln.get("Mini_Serie") ;
+			    RDFNode y = soln.get("Name") ;
+			    RDFNode c = soln.get("DateSortie") ;
+			    RDFNode d = soln.get("SociétéDeProduction") ;
+                JSONObject obj = new JSONObject();
+                obj.put("Mini_Serie" ,x.toString().split("#")[1]);
+	            obj.put("Name" ,y.toString());
+	            obj.put("DateSortie" ,c.toString());
+	            obj.put("SociétéDeProduction" ,d.toString());
+				list.add(obj);
+		    }
+		System.out.println(list);
+		return list;
+	}
+	
+	@GetMapping({"/mini-serie/{name}"})
+	public List<JSONObject> ListActeurs(@PathVariable("name") String name)
+	{
+		List<JSONObject> list=new ArrayList();
+		Model model = JenaEngine.readModel("data/CinemaOntology.owl");
+		// apply our rules on the owlInferencedModel
+		Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
+		// query on the model after inference
+		String queryString = "PREFIX ns: <http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#>\n" +
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "\n" +
+                "SELECT * \n" +
+                "WHERE {\n" +
+                "?Mini_Serie rdf:type ns:Mini_Serie .\n" +
                 "?Mini_Serie ns:aDesActeur ?Acteur .\n"+
 				"?Mini_Serie ns:DateSortie ?DateSortie ." +
 				"?Mini_Serie ns:SociétéDeProduction ?SociétéDeProduction ." +
                 "?Mini_Serie ns:aUnRealisateur ?Réalisateur .\n"+
                 "?Mini_Serie ns:aUnProducteur ?Producteur .\n"+
                 "?Mini_Serie ns:aUnGenre ?Genre .\n"+
-                "}";
+				"?Mini_Serie ns:Name ?Name .\n" +
+                "FILTER (?Name='"+name+"') ."+
+                "} \n";
+        
+
+		System.out.println(queryString);
 				Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
 		    ResultSet results = qexec.execSelect() ;
@@ -289,6 +334,7 @@ public class CinemaOntologyRestController {
 			    RDFNode b = soln.get("Genre") ;
 			    RDFNode c = soln.get("DateSortie") ;
 			    RDFNode d = soln.get("SociétéDeProduction") ;
+			    RDFNode e = soln.get("Name") ;
                 JSONObject obj = new JSONObject();
                 obj.put("Mini_Serie" ,x.toString().split("#")[1]);
 	            obj.put("Acteur" ,y.toString().split("#")[1]);
@@ -297,11 +343,13 @@ public class CinemaOntologyRestController {
 	            obj.put("Genre" ,b.toString().split("#")[1]);
 	            obj.put("DateSortie" ,c.toString());
 	            obj.put("SociétéDeProduction" ,d.toString());
+	            obj.put("Name" ,e.toString());
 				list.add(obj);
 		    }
 		System.out.println(list);
 		return list;
 	}
+
 	
 
 	@GetMapping({"/serie-limite"})

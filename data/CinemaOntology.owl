@@ -368,6 +368,7 @@
         <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Romance"/>
         <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe"/>
         <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breaking_Bad</Name>
         <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/05/2009</DateSortie>
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMC</SociétéDeProduction>
     </owl:NamedIndividual>
@@ -443,6 +444,7 @@
         <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
         <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Jon_Snow"/>
         <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Quentin_Tarantino"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game_Of_Thrones</Name>
         <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/10/2011</DateSortie>
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBO</SociétéDeProduction>
     </owl:NamedIndividual>
@@ -466,6 +468,7 @@
         <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Comédie"/>
         <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
         <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House_Of_The_Dragon</Name>
         <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22/08/2022</DateSortie>
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBO</SociétéDeProduction>
     </owl:NamedIndividual>
@@ -634,6 +637,7 @@
         <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
         <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
         <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suits</Name>
         <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02/06/2014</DateSortie>
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV</SociétéDeProduction>
     </owl:NamedIndividual>
