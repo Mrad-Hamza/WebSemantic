@@ -416,13 +416,66 @@ public class CinemaOntologyRestController {
                 "SELECT * \n" +
                 "WHERE {\n" +
                 "?Court_Métrage rdf:type ns:Court_Métrage .\n" +
+                "?Court_Métrage ns:aUnRealisateur ?Réalisateur .\n"+
+                "?Court_Métrage ns:aUnProducteur ?Producteur .\n"+
+                "?Court_Métrage ns:aUnGenre ?Genre .\n"+
+                "?Court_Métrage ns:Name ?Name .\n"+
+				"?Court_Métrage ns:DateSortie ?DateSortie ." +
+				"?Court_Métrage ns:SociétéDeProduction ?SociétéDeProduction ." +
+                "}";
+		System.out.println(queryString);
+				Query query = QueryFactory.create(queryString);
+		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
+		    ResultSet results = qexec.execSelect() ;
+		    while (results.hasNext())
+		    {
+		    	QuerySolution soln = results.nextSolution() ;
+		    	
+		    	RDFNode x = soln.get("Court_Métrage") ;
+			    RDFNode z = soln.get("Réalisateur") ;
+			    RDFNode a = soln.get("Producteur") ;
+			    RDFNode b = soln.get("Genre") ;
+			    RDFNode n = soln.get("Name") ;
+			    RDFNode c = soln.get("DateSortie") ;
+			    RDFNode d = soln.get("SociétéDeProduction") ;
+                JSONObject obj = new JSONObject();
+                obj.put("Court_Métrage" ,x.toString().split("#")[1]);
+	            obj.put("Réalisateur" ,z.toString().split("#")[1]);
+	            obj.put("Producteur" ,a.toString().split("#")[1]);
+	            obj.put("Genre" ,b.toString().split("#")[1]);
+	            obj.put("DateSortie" ,c.toString());
+	            obj.put("Name" ,n.toString());
+	            obj.put("SociétéDeProduction" ,d.toString());
+				list.add(obj);
+		    }
+		System.out.println(list);
+		return list;
+	}
+	
+	@GetMapping({"/court-metrage/{name}"})
+	public List<JSONObject> ListCourt_MétrageByName(@PathVariable("name") String name)
+	{
+		List<JSONObject> list=new ArrayList();
+		Model model = JenaEngine.readModel("data/CinemaOntology.owl");
+		// apply our rules on the owlInferencedModel
+		Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
+		// query on the model after inference
+		String queryString = "PREFIX ns: <http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#>\n" +
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "\n" +
+                "SELECT * \n" +
+                "WHERE {\n" +
+                "?Court_Métrage rdf:type ns:Court_Métrage .\n" +
                 "?Court_Métrage ns:aDesActeur ?Acteur .\n"+
                 "?Court_Métrage ns:aUnRealisateur ?Réalisateur .\n"+
                 "?Court_Métrage ns:aUnProducteur ?Producteur .\n"+
                 "?Court_Métrage ns:aUnGenre ?Genre .\n"+
+                "?Court_Métrage ns:Name ?Name .\n"+
 				"?Court_Métrage ns:DateSortie ?DateSortie ." +
 				"?Court_Métrage ns:SociétéDeProduction ?SociétéDeProduction ." +
+				"FILTER (?Name='"+name+"') ."+
                 "}";
+		System.out.println(queryString);
 				Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
 		    ResultSet results = qexec.execSelect() ;
@@ -435,6 +488,7 @@ public class CinemaOntologyRestController {
 			    RDFNode z = soln.get("Réalisateur") ;
 			    RDFNode a = soln.get("Producteur") ;
 			    RDFNode b = soln.get("Genre") ;
+			    RDFNode n = soln.get("Name") ;
 			    RDFNode c = soln.get("DateSortie") ;
 			    RDFNode d = soln.get("SociétéDeProduction") ;
                 JSONObject obj = new JSONObject();
@@ -444,6 +498,7 @@ public class CinemaOntologyRestController {
 	            obj.put("Producteur" ,a.toString().split("#")[1]);
 	            obj.put("Genre" ,b.toString().split("#")[1]);
 	            obj.put("DateSortie" ,c.toString());
+	            obj.put("Name" ,n.toString());
 	            obj.put("SociétéDeProduction" ,d.toString());
 				list.add(obj);
 		    }
