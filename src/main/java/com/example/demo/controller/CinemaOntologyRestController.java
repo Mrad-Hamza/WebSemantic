@@ -1,17 +1,18 @@
 package com.example.demo.controller;
 
+
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.jena.atlas.json.io.parser.JSONParser;
+
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
-import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.json.simple.JSONObject;
@@ -94,8 +95,8 @@ public class CinemaOntologyRestController {
                 "?Acteur rdf:type ns:Acteur .\n" +
 				"?Acteur ns:Age ?Age ." +
 				"?Acteur ns:Salaire ?Salaire ." +
-                "?Acteur ns:aUneSérie ?Série .\n"+
-                "?Acteur ns:aUnFilm ?Film .\n"+
+				"?Acteur ns:Name ?Name .\n" +
+
                 "} \n"
                 + "ORDER BY DESC(?Age)";
 				Query query = QueryFactory.create(queryString);
@@ -107,12 +108,63 @@ public class CinemaOntologyRestController {
 		    	
 		    	RDFNode x = soln.get("Acteur") ;
 			    RDFNode y = soln.get("Age") ;
+			    RDFNode a = soln.get("Name") ;
+			    RDFNode z = soln.get("Salaire") ;
+
+                JSONObject obj = new JSONObject();
+                obj.put("Acteur" ,x.toString().split("#")[1]);
+	            obj.put("Age" ,y.toString());
+	            obj.put("Salaire" ,z.toString());
+	            obj.put("Name" ,a.toString());
+
+				list.add(obj);
+		    }
+		System.out.println(list);
+		return list;
+	}
+	
+
+	@GetMapping({"/acteurs/{name}"})
+	public List<JSONObject> ListActeurs(@PathVariable("name") String name)
+	{
+		List<JSONObject> list=new ArrayList();
+		Model model = JenaEngine.readModel("data/CinemaOntology.owl");
+		// apply our rules on the owlInferencedModel
+		Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
+		// query on the model after inference
+		String queryString = "PREFIX ns: <http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#>\n" +
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "\n" +
+                "SELECT * \n" +
+                "WHERE {\n" +
+                "?Acteur rdf:type ns:Acteur .\n" +
+				"?Acteur ns:Age ?Age .\n" +
+				"?Acteur ns:Name ?Name .\n" +
+				"?Acteur ns:Salaire ?Salaire .\n" +
+				"?Acteur ns:aUneSérie ?Série .\n"+
+	            "?Acteur ns:aUnFilm ?Film .\n"+
+                "FILTER (?Name='"+name+"') ."+
+                "} \n";
+        
+
+		System.out.println(queryString);
+				Query query = QueryFactory.create(queryString);
+		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
+		    ResultSet results = qexec.execSelect() ;
+		    while (results.hasNext())
+		    {
+		    	QuerySolution soln = results.nextSolution() ;
+		    	
+		    	RDFNode x = soln.get("Acteur") ;
+			    RDFNode y = soln.get("Age") ;
+			    RDFNode c = soln.get("Name") ;
 			    RDFNode z = soln.get("Salaire") ;
 			    RDFNode a = soln.get("Série") ;
 			    RDFNode b = soln.get("Film") ;
                 JSONObject obj = new JSONObject();
                 obj.put("Acteur" ,x.toString().split("#")[1]);
 	            obj.put("Age" ,y.toString());
+	            obj.put("Name" ,c.toString());
 	            obj.put("Salaire" ,z.toString());
 	            obj.put("Série" ,a.toString().split("#")[1]);
 	            obj.put("Film" ,b.toString().split("#")[1]);
@@ -121,7 +173,6 @@ public class CinemaOntologyRestController {
 		System.out.println(list);
 		return list;
 	}
-	
 
 	@GetMapping({"/acteurBySerie/{serie}"})
 	public List<JSONObject> acteurBySerie(@PathVariable("serie") String serie)
@@ -180,10 +231,10 @@ public class CinemaOntologyRestController {
                 "SELECT * \n" +
                 "WHERE {\n" +
                 "?Producteur rdf:type ns:Producteur .\n" +
-				"?Acteur ns:Age ?Age ." +
-				"?Acteur ns:Salaire ?Salaire ." +
-                "?Producteur ns:aUneSérie ?Série .\n"+
-                "?Producteur ns:aUnFilm ?Film .\n"+
+				"?Producteur ns:Age ?Age ." +
+				"?Producteur ns:Salaire ?Salaire ." +
+
+
                 "}";
 				Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.create(query, inferedModel);
@@ -195,14 +246,11 @@ public class CinemaOntologyRestController {
 		    	RDFNode x = soln.get("Producteur") ;
 			    RDFNode y = soln.get("Age") ;
 			    RDFNode z = soln.get("Salaire") ;
-			    RDFNode a = soln.get("Série") ;
-			    RDFNode b = soln.get("Film") ;
+
                 JSONObject obj = new JSONObject();
                 obj.put("Producteur" ,x.toString().split("#")[1]);
 	            obj.put("Age" ,y.toString());
 	            obj.put("Salaire" ,z.toString());
-	            obj.put("Série" ,a.toString().split("#")[1]);
-	            obj.put("Film" ,b.toString().split("#")[1]);
 				list.add(obj);
 		    }
 		System.out.println(list);

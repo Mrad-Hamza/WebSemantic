@@ -104,6 +104,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Name"/>
+    
+
+
     <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Salaire -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Salaire"/>
@@ -339,8 +345,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
-        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al_Pacino</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.6M</Salaire>
     </owl:NamedIndividual>
     
@@ -352,9 +358,24 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits"/>
-        <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana_D_armas</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6M</Salaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Batman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Batman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Court_Métrage"/>
+        <aDesActeur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Margot_Robbie"/>
+        <aUnGenre rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Drama"/>
+        <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Daemon_Targaryen"/>
+        <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Martin_Scorcesse"/>
+        <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01/10/2022</DateSortie>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batman</Name>
+        <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DC</SociétéDeProduction>
     </owl:NamedIndividual>
     
 
@@ -421,6 +442,7 @@
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Suits"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daemon_Targaryen</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8M</Salaire>
     </owl:NamedIndividual>
     
@@ -485,6 +507,7 @@
         <aUnProducteur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Joe_Doe"/>
         <aUnRealisateur rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Christopher_Nolan"/>
         <DateSortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06/02/2013</DateSortie>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inception</Name>
         <SociétéDeProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hulu</SociétéDeProduction>
     </owl:NamedIndividual>
     
@@ -497,6 +520,7 @@
         <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Inception"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Breaking_Bad"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe_Doe</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3M</Salaire>
     </owl:NamedIndividual>
     
@@ -510,6 +534,7 @@
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#The_Great_Train_Robbery"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon_Snow</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6M</Salaire>
     </owl:NamedIndividual>
     
@@ -523,6 +548,7 @@
         <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo_Di_Caprio</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.3M</Salaire>
     </owl:NamedIndividual>
     
@@ -535,6 +561,7 @@
         <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Casino"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Margot_Robbie</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1M</Salaire>
     </owl:NamedIndividual>
     
@@ -603,6 +630,7 @@
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Game_Of_Thrones"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Queens_Gambit"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert_Di_Neiro</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.9M</Salaire>
     </owl:NamedIndividual>
     
@@ -624,6 +652,7 @@
         <aUnFilm rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Pulp_Fiction"/>
         <aUneSérie rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#House_Of_The_Dragon"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59</Age>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samuel_L_Jackson</Name>
         <Salaire rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.6</Salaire>
     </owl:NamedIndividual>
     
@@ -648,14 +677,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Test">
         <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Personne"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Testa -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Testa">
-        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/9/Cinema#Acteur"/>
     </owl:NamedIndividual>
     
 
