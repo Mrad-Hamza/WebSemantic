@@ -343,7 +343,7 @@ public class CinemaOntologyRestController {
 	}
 	
 	@GetMapping({"/mini-serie/{name}"})
-	public List<JSONObject> ListActeurs(@PathVariable("name") String name)
+	public List<JSONObject> MiniSerie(@PathVariable("name") String name)
 	{
 		List<JSONObject> list=new ArrayList();
 		Model model = JenaEngine.readModel("data/CinemaOntology.owl");
